@@ -4,6 +4,9 @@
 <title> 중개업체 - html</title>
 <meta charset="utf-8">
 <style>
+body{
+  margin:0px;
+}
 a{
   color:black;
   text-decoration: none;
@@ -19,7 +22,33 @@ h1 {
   font-size:45px;
   text-align:center;
   border-bottom:1px solid gray;
+  margin:0px;
+  padding:20px;
 }
+#grid{
+  display:grid;
+  grid-template-columns:130px 1fr;
+}
+#grid ol{
+  border-right:1px solid gray;
+  width:100px;
+  margin:0px;
+  padding:20px;
+}
+#maintext{
+  margin:20px;
+}
+@media(max-width:700px)
+{
+  #grid{
+    display:block;
+  }
+  #grid ol{
+        border-right:none;
+      }
+
+}
+
 </style>
 
 </head>
@@ -27,11 +56,13 @@ h1 {
 <body>
 
   <H1><a href="index.html">중개거래 플랫폼</a></H1>
+  <div id="grid">
   <ol>
    <li><a href="1.html" class="saw" id="active";>KREAM</a></li>
   <li><a href="2.html" class="saw">SOLDOUT</a></li>
-
   </ol>
+
+<div id="maintext">
   <!--
   <H1><a href="index.html"><font color="red">중개거래 플랫폼</font></a></H1>
 <ol>
@@ -64,6 +95,8 @@ KREAM이 검수한 제품 중 가품이 나올경우 구매액 3배의 금액을
 
 일단 구매자는 제품에 하자가 있지 않는 한, 결제가 이루어진 이후엔 절대로 취소를 할 수 없다. 이와 대비되게, 판매자는 판매 거부를 통하여 거래 취소가 가능하다. <BR>다만 판매를 일방적으로 취소할시 거래 금액의 10%~15% 가량을 패널티로 부과하는 방지책이 존재한다. 그러나 판매자에게 어찌저찌 패널티 금액을 받아내더라도 이는 구매자에게 돌아가지 않는다.
 <p>
+</div>
+</div>
   <div id="disqus_thread"></div>
 <script>
     /**
